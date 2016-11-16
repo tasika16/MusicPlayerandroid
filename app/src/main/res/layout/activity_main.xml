@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.tasika696.musicplayer.MainActivity">
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&gt;"
+        android:id="@+id/playBtn"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="|&lt;&lt;"
+        android:id="@+id/preBtn"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/playBtn"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="|&gt;&gt;"
+        android:id="@+id/nextBtn"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/playBtn"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10:10"
+        android:layout_above="@id/preBtn"
+        android:id="@+id/nowTime"
+        android:layout_toLeftOf="@id/preBtn"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10:10"
+        android:layout_toRightOf="@id/nextBtn"
+        android:layout_above="@id/nextBtn"
+        android:id="@+id/allTime"/>
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:layout_alignLeft="@+id/nowTime"
+        android:layout_alignStart="@id/preBtn"
+        android:layout_alignRight="@id/allTime"
+        android:layout_alignEnd="@id/nextBtn"
+        android:layout_above="@id/playBtn" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/seekBar"
+        android:id="@+id/playList">
+    </ListView>
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/loadFolderBtn"
+        android:text="+"
+        android:background="@drawable/button_bg_round"
+        android:padding="3dp"
+        android:textSize="40dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_alignBottom="@id/playList"
+        android:layout_alignRight="@id/playList"/>
+</RelativeLayout>
